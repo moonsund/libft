@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lorlov <lorlov@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/05 11:08:45 by lorlov            #+#    #+#             */
-/*   Updated: 2025/08/05 11:14:48 by lorlov           ###   ########.fr       */
+/*   Created: 2025/05/22 13:23:44 by lorlov            #+#    #+#             */
+/*   Updated: 2025/05/28 13:43:52 by lorlov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	t_list	*new_node;
-	t_list	*new_lst;
-
-	if (!lst || !f || !del)
-		return (NULL);
-	new_lst = NULL;
-	while (lst != NULL)
-	{
-		new_node = ft_lstnew(f(lst->content));
-		if (!new_node)
-		{
-			ft_lstdelone(new_node, del);
-			return (NULL);
-		}
-		ft_lstadd_back(&new_lst, new_node);
-		lst = lst->next;
-	}
-	return (new_lst);
+	size_t	i;
+	
+	i = 0;
+	while (s1[i] && (unsigned char)s1[i] == (unsigned char)s2[i])
+		i++;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

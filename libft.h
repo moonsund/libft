@@ -6,7 +6,7 @@
 /*   By: lorlov <lorlov@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 15:00:03 by lorlov            #+#    #+#             */
-/*   Updated: 2025/07/18 12:49:30 by lorlov           ###   ########.fr       */
+/*   Updated: 2025/08/24 11:37:20 by lorlov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 1024
 # endif
 
 # include <unistd.h>
@@ -58,6 +58,7 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src,
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *s1);
 
