@@ -6,13 +6,13 @@
 /*   By: lorlov <lorlov@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 10:55:14 by lorlov            #+#    #+#             */
-/*   Updated: 2025/09/26 12:24:52 by lorlov           ###   ########.fr       */
+/*   Updated: 2025/09/26 12:34:29 by lorlov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_node;
 

@@ -6,7 +6,7 @@
 /*   By: lorlov <lorlov@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 15:48:30 by lorlov            #+#    #+#             */
-/*   Updated: 2025/08/11 16:13:54 by lorlov           ###   ########.fr       */
+/*   Updated: 2025/09/26 12:38:10 by lorlov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,9 @@ static char	*read_and_append(int fd, char *stash)
 
 	buf = (char *)malloc(BUFFER_SIZE + 1);
 	if (!buf)
-		return (free(stash), (char *)NULL);
-	if (!stash) 
-	{
-        stash = ft_strdup("");
-        // if (!stash)
-        //     return (free(buf), NULL);
-    }
+		return (free(stash), (char *) NULL);
+	if (!stash)
+		stash = ft_strdup("");
 	bytes = 1;
 	while (!ft_strchr(stash, '\n') && bytes > 0)
 	{
